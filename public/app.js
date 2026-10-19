@@ -4,7 +4,7 @@
   const MAX_CHARS = 4000;          // keep in sync with LIMITS.maxUserChars in api/chat.js
   const MAX_HISTORY = 20;          // most recent messages sent as context
   const CLIENT_TIMEOUT_MS = 40000; // a little longer than the server's upstream timeout
-  const ROBOT_SRC = 'assets/robot.png';
+  const ROBOT_SRC = 'assets/devil.png';
 
   const $ = (sel) => document.querySelector(sel);
   const app = $('#app');
@@ -177,7 +177,7 @@
     img.alt = '';
     avatar.appendChild(img);
     const body = el('div', 'msg-body');
-    body.appendChild(el('div', 'msg-meta mono', 'ORBIT'));
+    body.appendChild(el('div', 'msg-meta mono', 'KARAN’S BOT'));
     article.append(avatar, body);
     return { article, body };
   }
@@ -291,7 +291,7 @@
     state.controller = controller;
     state.stopReason = null;
     setBusy(true);
-    announce('Orbit is thinking');
+    announce('Karan’s Bot is thinking');
 
     const typing = addTyping();
     const started = Date.now();
@@ -321,7 +321,7 @@
       typing.article.remove();
       state.messages.push({ role: 'assistant', content: data.reply });
       addBotMessage(data.reply, { truncated: data.truncated });
-      announce('Orbit replied');
+      announce('Karan’s Bot replied');
     } catch (err) {
       typing.article.remove();
       if (err.name === 'AbortError' && state.stopReason === 'user') {
@@ -331,7 +331,7 @@
         // New chat: nothing to show.
       } else {
         const message = err.name === 'AbortError'
-          ? 'Orbit took too long to answer. Please try again.'
+          ? 'Karan’s Bot took too long to answer. Please try again.'
           : err instanceof TypeError
             ? 'Couldn’t reach the server. Check your connection and try again.'
             : err.message;

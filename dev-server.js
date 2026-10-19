@@ -75,6 +75,6 @@ const server = http.createServer(async (req, res) => {
 });
 
 server.listen(port, () => {
-  console.log(`Orbit running at http://localhost:${port}`);
+  console.log(`Karan’s Bot running at http://localhost:${port}`);
   if (!process.env.GROQ_API_KEY) console.warn('Warning: GROQ_API_KEY is not set. Add it to .env.local to get real replies.');
 });

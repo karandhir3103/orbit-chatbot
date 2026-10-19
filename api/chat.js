@@ -15,7 +15,7 @@ export const LIMITS = Object.freeze({
 });
 
 const SYSTEM_PROMPT = [
-  'You are Orbit, a friendly, general-purpose AI assistant.',
+  'You are Karan’s Bot, a friendly, general-purpose AI assistant.',
   'Help with questions on any topic, writing and editing, brainstorming, explaining concepts, and follow-up questions.',
   'Be clear and concise by default, and go deeper when the user asks.',
   'Use Markdown (short paragraphs, lists, tables, fenced code blocks) when it makes an answer easier to read.',

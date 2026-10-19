@@ -1,18 +1,18 @@
-# Orbit
+# Karan’s Bot
 
 A friendly, general-purpose AI chatbot powered by [Groq](https://groq.com). Ask questions on any topic, draft writing, brainstorm, get concepts explained and keep asking follow-ups.
 
 Plain HTML, CSS and JavaScript on the front end, plus one Vercel serverless function (`api/chat.js`) that talks to Groq. There's no build step and no dependencies.
 
 ```
-orbit/
+orbit-chatbot/
 ├── api/chat.js          # POST /api/chat → Groq (key stays server-side)
 ├── public/
 │   ├── index.html
 │   ├── styles.css
 │   ├── app.js
 │   ├── theme-init.js    # applies saved theme before first paint
-│   └── assets/robot.png
+│   └── assets/devil.png
 ├── test/chat.test.js    # API tests (Groq mocked, no key needed)
 ├── dev-server.js        # local server that mimics Vercel
 ├── vercel.json          # output dir, function timeout, security headers
